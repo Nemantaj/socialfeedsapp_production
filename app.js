@@ -16,7 +16,7 @@ const convosRoutes = require("./routes/convos");
 
 const PORT = process.env.PORT || 3001;
 const corsOptions = {
-  origin: true,
+  origin: ["https://socialfeedsapp.herokuapp.com", "http://localhost:3001"],
   credentials: true,
   optionSuccessStatus: 200,
 };
