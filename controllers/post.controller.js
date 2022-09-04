@@ -647,7 +647,7 @@ exports.getStories = (req, res, next) => {
         const path = doc.stories.img;
         const path2 = path.replace(/\\/g, "/");
         return {
-          url: `http://localhost:3001/${path2}`,
+          url: `https://socialfeedsapp.herokuapp.com/${path2}`,
           header: {
             heading: doc.stories.caption,
             subheading: doc.expire_at,
