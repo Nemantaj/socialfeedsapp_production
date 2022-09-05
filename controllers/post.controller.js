@@ -647,7 +647,7 @@ exports.getStories = (req, res, next) => {
         const path = doc.stories.img;
         const path2 = path.replace(/\\/g, "/");
         return {
-          url: `https://socialfeedsapp.herokuapp.com/${path2}`,
+          url: `https://socialfeedsapp.vercel.app/${path2}`,
           header: {
             heading: doc.stories.caption,
             subheading: new Date(doc.expire_at)
