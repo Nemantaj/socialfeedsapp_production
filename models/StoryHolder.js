@@ -18,6 +18,6 @@ const storyHolderSchema = new Schema(
   { timestamps: true }
 );
 
-storyHolderSchema.index({ createdAt: 1 }, { expireAfterSeconds: 3600 });
+storyHolderSchema.index({ createdAt: 1 }, { expireAfterSeconds: 86400 });
 
 module.exports = mongoose.model("StoryHolder", storyHolderSchema);

@@ -650,7 +650,11 @@ exports.getStories = (req, res, next) => {
           url: `https://socialfeedsapp.herokuapp.com/${path2}`,
           header: {
             heading: doc.stories.caption,
-            subheading: doc.expire_at,
+            subheading: new Date(doc.expire_at)
+              .toISOString()
+              .slice(0, 19)
+              .replace(/-/g, "/")
+              .replace("T", " "),
           },
         };
       });
